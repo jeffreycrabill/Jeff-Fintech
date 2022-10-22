@@ -75,14 +75,16 @@ print(f"There are {remaining_months} months remaining on the loan")
 #   You'll want to use the **monthly** version of the present value formula.
 #   HINT: Present Value = Future Value / (1 + Discount_Rate/12) ** remaining_months
 
-# YOUR CODE HERE!
+present_value = future_value / (1 + .2/12) ** 9
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
 # @TODO: Write a conditional statement (an if-else statement) to decide if the present value represents the loan's fair value.
 #    If the present value of the loan is greater than or equal to the cost, then print a message that says the loan is worth at least the cost to buy it.
 #    Else, the present value of the loan is less than the loan cost, then print a message that says that the loan is too expensive and not worth the price.
-# YOUR CODE HERE!
-
+if present_value >= loan.get("loan_price"):
+    print(f"The loan is worth buying at current price")
+else:
+    print("The loan is too expensive to buy at current price")
 
 """Part 3: Perform Financial Calculations.
 
